@@ -7,16 +7,17 @@ class App extends React.Component {
             content: 'bq'
         }
     }
-    onToggle() {
-        this.setState({content: this.state.content === 'bq' ? 'dp' : 'bq'})
+    onSync() {
+        this.setState({content: this.refs.input.value})
     }
     render () {
         return (
             <div>
                 <h2>{this.props.name}</h2>
                 <hr/>
+                <input ref='input' type='text' defaultValue='dp'/>
                 <p>{this.state.content}</p>
-                <button onClick={e => this.onToggle(e)}>toggle</button>
+                <button onClick={e => this.onSync(e)}>sync</button>
             </div>
         )
     }
