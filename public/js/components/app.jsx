@@ -1,10 +1,12 @@
 import React, { PropTypes } from 'react'
 
+import Content from './content'
+
 class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            content: 'bq'
+            content: 1234
         }
     }
     onSync() {
@@ -16,7 +18,7 @@ class App extends React.Component {
                 <h2>{this.props.name}</h2>
                 <hr/>
                 <input ref='input' type='text' defaultValue='dp'/>
-                <p>{this.state.content}</p>
+                <Content content={this.state.content}/>
                 <button onClick={e => this.onSync(e)}>sync</button>
             </div>
         )
