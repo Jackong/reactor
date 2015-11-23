@@ -6,7 +6,7 @@ class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            content: 1234
+            content: "hi"
         }
     }
     onSync() {
