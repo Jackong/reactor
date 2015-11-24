@@ -1,10 +1,10 @@
 import React from 'react'
 import {render} from 'react-dom'
 
-import routes from './routes'
+import Root from './containers/root'
 
 try {
-    render(routes, document.getElementById('app'))
+    render(<Root />, document.getElementById('app'))
 } catch(err) {
     console.error(err)
 }

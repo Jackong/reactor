@@ -25,7 +25,10 @@
     "radium": "^0.15.3",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
-    "react-router": "^1.0.0"
+    "react-redux": "^4.0.0",
+    "react-router": "^1.0.0",
+    "redux": "^3.0.4",
+    "redux-router": "^1.0.0-beta4"
   },
   "devDependencies": {
     "babel-core": "^6.1.21",

@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react'
-import App from '../components/app'
+import {connect} from 'react-redux'
+import Content from '../components/content'
+import {sync} from '../actions'
 
 class Home extends React.Component {
     render () {
@@ -7,10 +9,14 @@ class Home extends React.Component {
             <div>
                 home
                 <hr/>
-                <App name='tutorial' />
+                <div>
+                    <input ref='input' type='text' defaultValue='dp'/>
+                    <Content content={this.props.content}/>
+                    <button onClick={e => this.props.dispatch(sync(this.refs.input.value.trim()))}>sync</button>
+                </div>
             </div>
         )
     }
 }
 
-export default Home
+export default connect(state => state)(Home)
